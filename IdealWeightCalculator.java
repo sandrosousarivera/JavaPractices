@@ -16,7 +16,16 @@ public class IdealWeightCalculator {
 		 
 		 while(gender.equalsIgnoreCase("M")==false && gender.equalsIgnoreCase("F")==false);
 		 
-		 int height= Integer.parseInt(JOptionPane.showInputDialog("Enter your height in centimeters."));
+		 
+			String input = JOptionPane.showInputDialog("Enter your height in centimeters:");
+			
+			while (!input.matches("\\d+")) {
+				
+				input = JOptionPane.showInputDialog("Please enter a valid number:");
+			}
+		 
+		 
+		 int height = Integer.parseInt(input);
 
 
 		 int idealWeight= 0;

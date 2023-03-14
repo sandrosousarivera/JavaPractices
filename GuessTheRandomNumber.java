@@ -16,7 +16,7 @@ public class GuessTheRandomNumber {
 		
 		System.out.println("I'm gonna guess a number between 0 and 100, can you guess what number it is?");
 		
-		while(userNumber != randomNumber) {
+		do {
 			
 			tries ++;
 			
@@ -36,7 +36,7 @@ public class GuessTheRandomNumber {
 				
 			}
 			
-		}
+		} while(userNumber != randomNumber);
 		
 		
 		System.out.println("HOORAY! you guessed the number in " + tries + " tries");
